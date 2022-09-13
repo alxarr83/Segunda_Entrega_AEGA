@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&family=Source+Sans+Pro:wght@300&display=swap');
+
+
+*{
+	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background-image: url(../img/circuit.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1,h2,h3{
+
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1{
+    color: rgba(135, 188, 196, 0.966) ;
+    font-size: 4rem;
+    
+}
+
+h2{
+    color: rgb(179, 202, 245);
+    font-size: 3.8rem;
+}
+
+h3{
+    color: rgb(179, 202, 245);
+    font-size: 3rem;
+}
+
+p{
+	color:#e8f3f3;
+	line-height: 2rem;
+	font-size: 1.6rem;
+}
+
+ /*Animations*/
+
+.linear-gradient{
+	background: linear-gradient(to right, rgb(192, 255, 206), rgb(4, 126, 4));
+}
+
+.transform:hover{
+	transform: translate(-10px,10px);
+	cursor: pointer;
+	transition: transform 1s;
+}
+
+.scale:hover{
+	transform: scaleX(0.8);
+	cursor: pointer;
+	transition: transform 1s;
+}
+
+.skew:hover{
+	transform: skewX(-10deg);
+	cursor: pointer;
+	transition: transform 1s;
+}
+
+button{
+	width: 100px;
+	height: 30px;
+	background: rgb(10, 95, 95);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	margin-left: 10px;
+	border:none;
+	border-radius: 4px;
+	transition: all 2s;
+}
+
+button:hover{
+	background: linear-gradient(to top, rgb(82, 150, 206), rgb(7, 28, 121));
+	cursor: pointer;
+	
+}
+
+@keyframes headerAnimation{
+	0%{background-image: url(../img/FIGO_PROJECT11.jpg)}
+	25%{background-image: url(../img/FIGO_PROJECT22.jpg)}
+	50%{background-image: url(../img/FIGO_TRUCK.jpeg)}
+	75%{background-image: url(../img/FIGO_PROJECT2.jpg)}
+	100%{background-image: url(../img/FIGO_PROJECT1.webp)}
+}
+
+header{
+	align-items: center;
+	height: 25vh;
+    width: 100%;
+	
+	background-size: cover;
+	animation-name: headerAnimation;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+
+/* ============== MOBILE FIRST ================== */
+/*definition of GRID LAYOUT */
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"nav" 
+	"header" 
+	"productos" 
+	"filtros" 
+	"aside" 
+	"footer";
+}
+
+/*layout*/
+#mainNav{
+	grid-area: nav;
+}
+
+#header{
+	grid-area: header;
+}
+
+#filtros{
+	grid-area: filtros;
+}
+
+#productos{
+	grid-area: productos;
+}
+
+#aside{
+	background-color: rgba(8, 22, 97, 0.966);
+	padding: 20px 0;
+	grid-area: aside;    
+
+}
+
+#footer{
+	grid-area: footer;
+}
+
+
+/* ============== ENDS MOBILE FIRST ================== */
+
+
+.textBold{
+	font-weight: 600;
+	font-size: 2rem;
+	color: white;
+}
+
+.textBlack{
+	font-weight: 600;
+	font-size: 1.8rem;
+	color:black;
+}
+
+.textCenter{
+	text-align: center;
+}
+
+.textRight{
+	text-align: right;
+}
+
+.textLeft{
+	text-align: left;
+}
+
+.textJustify{
+	text-align: justify;
+}
+
+.bgLight{
+	background-color:rgba(243, 240, 240, .8) ;
+}
+
+
+.bg-blue{
+    background-color:  rgba(15, 26, 128, 0.7);
+ }
+
+.bg-green{
+    background-color: rgba(35, 82, 143, 0.7);
+}
+
+.box{
+	width: 90%;
+    height: auto;
+    margin: 50px auto;
+    padding: 40px 20px;
+    border: dotted rgba(15, 26, 128, 0.7) 2px;
+    overflow-y: auto;
+}
+
+
+.box-titlel{
+	font-size: 4rem;
+}
+
+.box-title2{
+	font-size: 3rem;
+}
+
+.box__titlem{
+	font-size: 2rem;
+	margin: 5px 0;
+    margin-bottom: 30px;
+}
+
+.next_projects {
+    width:300px;
+	height: 200px;
+	overflow: hidden;
+	padding: 20px 30px;
+	border: solid rgba(86, 91, 139, 0.7) 2px;
+	box-sizing: border-box;
+	margin: 30px auto;
+    /*margin-left: 70px;*/
+
+}
+
+/*BEM Class */
+.add__WA{
+	text-align: center;
+    width: 100%;
+	background-color: #27af2e;
+    color:  white;
+    font-size: 2.25rem;
+    
+	/*padding*/
+	padding: 4px 0;
+    font-weight: 800   
+}
+
+/*footer*/
+.foot{
+	/*padding*/
+	padding:30px;
+	/****display flex****/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.foot a{
+	text-decoration: none;
+}
+
+.foot__icon--sm{
+	/*size*/
+	width: 30px;
+}
+
+.foot__titulo--md{
+	font-size: 2rem;
+}
+
+
+		#productos .galeria figure img{
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			width: 100%;
+		}
+
+		#productos .galeria figure figcaption{
+			font-size: 3.5rem;
+			padding: 10px 0;
+			background-color: rgb(192, 201, 212);
+			text-align: center;
+		}
+
+
+/* PRODUCTOS*/
+.Nav2{
+	background-color: rgba(164, 224, 211, 0.8);
+	color:black ;
+	padding: 10px 30px;
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* ======================= media queries INDEX ======================= */
+
+/* min-width: 768px definimos 2cols (30VW - 70VW) y 5 rows auto */
+@media (min-width: 768px){
+	.container{
+		grid-template-columns: 30vw 70vw;
+		grid-template-areas: 
+		"nav nav" 
+		"header header" 
+		"filtros productos"
+		"aside aside" 
+		"footer footer";
+	}
+
+
+	#productos .galeria{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	#productos .galeria figure{
+		width: 90%;
+	}
+
+	#aside{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+@media (min-width: 1024px){
+	
+	.container{
+		display: grid;
+		grid-template-columns: 15vw 58vw 10vw;
+		grid-template-rows: auto;
+		grid-template-areas: 
+		"nav nav nav" 
+		"header header header" 
+		"filtros productos aside" 
+		"footer footer footer";
+	}
+
+	#aside{
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	#aside img{
+		width: 70%;
+	}
+
+	#productos .galeria figure{
+		width: 80%;
+	}
+
+	.buttons{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+			.buttons img{
+			margin-bottom: 0;
+		}
+}
+
+@media (min-width: 1200px){
+	
+	#productos .galeria{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+		#productos .galeria figure{
+			width: 30%;
+		}
+
+}
+
+
